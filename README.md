@@ -1,10 +1,9 @@
-Python Keylogger (.exe)
-Overview
+Python Keylogger Overview
 
-This project is a Python-based keystroke logging program developed to understand keyboard event handling, file logging, timestamps, and executable deployment. The application captures keyboard input, appends timestamps, and stores the data in a text file. The Python script was converted into a Windows .exe for standalone execution.
+This project is a Python-based keystroke logging program developed to understand keyboard event handling, file logging, timestamps, and keyboard input processing. The application captures keyboard input, appends timestamps, and stores the data in a text file.
 
 ⚠️ Educational Use Only
-This project is strictly for learning and experimentation on systems you own or have permission to use.
+This project is strictly for learning and experimentation on systems you own or have explicit permission to use.
 
 Features
 
@@ -22,21 +21,13 @@ Space, Enter, Tab
 
 Backspace
 
-Special keys (logged with labels)
-
-Runs as a standalone .exe (no Python required)
+Special keys (logged with readable labels)
 
 File Structure
 keylogger/
 │
-├── build/                # Build files generated during exe creation
-├── dist/
-│   ├── keystroke.exe     # Executable file
-│   └── mydata.txt        # Output log file
-│
-├── keystroke.py          # Original Python source code
-├── keystroke.spec        # PyInstaller spec file
-└── mydata.txt            # Log file (used during testing)
+├── keystroke.py     # Python source code
+└── mydata.txt       # Output log file
 
 How It Works
 
@@ -48,22 +39,16 @@ On every key press, the content is written to mydata.txt
 
 Pressing Enter inserts a new line with a timestamp
 
-Special keys are logged with readable labels
+Special keys are logged using readable labels for clarity
 
 Execution
 
-You can run the program in two ways:
+Run the program using Python:
 
-1. Using Python
-   
 python keystroke.py
 
-2. Using Executable
-   
-dist/keystroke.exe
 
-
-Running the .exe will automatically start logging keystrokes into mydata.txt.
+Once executed, the program immediately begins logging keystrokes into mydata.txt.
 
 Technologies Used
 
@@ -72,5 +57,3 @@ Python
 pynput
 
 datetime
-
-PyInstaller (for .exe conversion)
